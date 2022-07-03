@@ -17,5 +17,8 @@ public class GoogleSearchPage {
     @FindBy (xpath = "//*[@id=\"L2AGLb\"]")
     public WebElement kabulEdiyorum;
 
+    @FindBy (xpath = "//a[@class='FLP8od']")
+    public WebElement capitalAsResult;
+
 
 }

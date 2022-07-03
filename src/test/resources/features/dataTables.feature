@@ -1,18 +1,20 @@
-@data_table
 Feature: Examples of Cucumber data table implementations
-
 
   Scenario: List of fruits I like
     Then user should see fruits I like
-      | kiwi       |
-      | banana     |
-      | orange     |
-      | grape      |
-      | watermelon |
-      | mango      |
+      | kiwi        |
+      | banana      |
+      | cucumber    |
+      | orange      |
+      | mango       |
+      | grape       |
+      | pomegranate |
+
+    #to beautify the pipes above
+    #mac: command + option + L
+    #windows: control + alt + L
 
 
-  @failedToTest
   Scenario: User should be able to see all 12 months in months
   dropdown
     Given User is on the dropdowns page of practice tool
@@ -28,6 +30,4 @@ Feature: Examples of Cucumber data table implementations
       | September |
       | October   |
       | November  |
-      | invalid   |
-
-
+      | December  |

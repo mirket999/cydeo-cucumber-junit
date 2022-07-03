@@ -43,7 +43,7 @@ public class GoogleStepDefinitions {
     @Then("user sees apple in the google title")
     public void user_sees_apple_in_the_google_title() {
 
-        String expectedTitle = "apple - Google Search";
+        String expectedTitle = "apple - Google'da Ara";
         String actualTitle = Driver.getDriver().getTitle();
 
         //Junit assertion accepts first arg as expected, second arg as actual
@@ -72,5 +72,9 @@ public class GoogleStepDefinitions {
     }
 
 
-
+    @Then("User should see {string} in the result")
+    public void userShouldSeeInTheResult(String capital) {
+       // System.out.println("googleSearchPage.capitalAsResult.getText() = " + googleSearchPage.capitalAsResult.getText());
+        Assert.assertTrue(googleSearchPage.capitalAsResult.getText().contains(capital));
+    }
 }
