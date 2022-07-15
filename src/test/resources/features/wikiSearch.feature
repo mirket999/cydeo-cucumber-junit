@@ -2,7 +2,7 @@
 Feature: Wikipedia search functionality and verifications
 
   #WSF-45234 --> potential jira ticket number
-
+  @smoke
   Scenario: Wikipedia Search Functionality Title Verification
     Given User is on Wikipedia home page
     When User types "Bill Gates" in the wiki search box

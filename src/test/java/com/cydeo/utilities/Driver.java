@@ -62,7 +62,7 @@ public class Driver {
                     break;
                 case "remote-chrome":
                     // assign your grid server address
-                    String gridAdress = "54.89.242.106"; // put your own Linux grid IP here
+                    String gridAdress = "54.157.195.239"; // put your own Linux grid IP here
                     try {
                         URL url = new URL("http://"+gridAdress+":4444/wd/hub");
                         DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
@@ -74,6 +74,17 @@ public class Driver {
                         e.printStackTrace();
                     }
                     break;
+                case "saucelab_chrome":
+                    try {
+                        URL url = new URL("https://oauth-omerdemirel999-e86e5:18a9edce-acd9-492f-bbf1-4db7b15a0772@ondemand.eu-central-1.saucelabs.com:443/wd/hub");
+                        DesiredCapabilities desiredCapabilities = new DesiredCapabilities();
+                        desiredCapabilities.setBrowserName("chrome");
+                        driverPool.set(new RemoteWebDriver(url,desiredCapabilities));
+                        driverPool.get().manage().window().maximize();
+                        driverPool.get().manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+                    } catch(MalformedURLException e){
+                        e.printStackTrace();
+                    }
 
             }
         }
