@@ -21,7 +21,7 @@ Feature: Library app login feature
     And user enters student password
     Then user should see the dashboard
 
-  @wip
+
   @admin @employee
   Scenario: Login as admin
     When user enters admin username
